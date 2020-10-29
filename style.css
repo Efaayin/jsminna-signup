@@ -1,0 +1,147 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+    outline: none;
+}
+
+body {
+    box-sizing: inherit;
+    margin: 0;
+    background-color: #3598DC;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.signup {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding-bottom: 1rem;
+    /* border: 1px solid red; */
+}
+
+.signup-caption {
+    padding: 2rem;
+    border-bottom: 1px solid #EDEFEF;
+}
+
+.signup-caption h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.signup-form {
+    padding: 0 2rem;
+}
+
+.form-names {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+/* .form-names:last-child {
+    justify-content: flex-end;
+} */
+
+.form-names div {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 48%;
+}
+
+label input {
+    width: 100%;
+    border: none;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #F2F2F2;
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* border: 1px solid red; */
+}
+
+.accept p {
+    margin: 0;
+}
+
+.accept input {
+    margin-right: 1rem;
+}
+
+.accept p a {
+    color: #3BB6EF;
+    text-decoration: none;
+}
+
+.btn {
+    width: 40%;
+    margin-bottom: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.btn p {
+    /* margin: 0; */
+    width: 100%;
+    text-align: center;
+}
+
+.btn p #signup-btn {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: rgba(53, 152, 220, .3);
+    font-size: 1.1rem;
+    padding: 1rem;
+    cursor: not-allowed;
+}
+
+.login {
+    margin-top: 1.5rem;
+}
+
+.login p {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.login p a {
+    color: #FFFFFF;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.success {
+    border: 1px solid green;
+}
+
+.red-text {
+    color: red;
+}
+
+small {
+    display: none;
+}
+
+label {
+    display: flex;
+    flex-flow: column nowrap;
+}

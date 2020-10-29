@@ -1,0 +1,97 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+    outline: none;
+}
+
+body {
+    box-sizing: inherit;
+    margin: 0;
+    height: 100%;
+    background-color: #3598DC;
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    /* border: 1px solid red; */
+}
+
+header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.details {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.details input {
+    width: 100%;
+    border: none;
+    /* margin-top: 2rem; */
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #F2F2F2;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #F0F0F0;
+}
+
+button {
+    /* display: inline-block; */
+    width: 40%;
+    padding: .8rem;
+    margin: 2rem auto 0 auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #3598DC;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+button:active {
+    background-color: rgba(53, 152, 220, .8);
+}
+
+.signup {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.signup a {
+    color: #3598DC;
+    text-decoration: underline;
+}
+
+.details .error {
+    border: 1px solid red;
+}
+
+.details .success {
+    border: 1px solid green;
+}
+
+.field {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+    /* border: 1px solid black; */
+}
+
+small {
+    display: none;
+    padding: 0;
+}
