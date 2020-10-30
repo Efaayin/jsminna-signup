@@ -3,6 +3,7 @@
 *::after {
     box-sizing: inherit;
     outline: none;
+    padding: 0;
 }
 
 body {
@@ -13,8 +14,7 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
     background-color: #FFFFFF;
     box-sizing: border-box;
     margin: 50vh auto 0;
