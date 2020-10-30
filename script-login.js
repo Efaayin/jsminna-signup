@@ -21,33 +21,50 @@ function successFxn(input) {
     input.className = 'success'
 }
 
+let watch = {
+    one: '',
+    two: ''
+};
+
+function emailValidate() {
+    if (!email.value.match(mailformat)) {
+        errorFxn(email, 'Please enter a valid email address.')
+        watch.one = 'false';
+    } else if (email.value.match(mailformat) && password.value.trim().length < 8) {
+        successFxn(email);
+        watch.one = 'true';
+    } else if (email.value.match(mailformat) && password.value.trim().length >= 8) {
+        successFxn(email);
+        watch.one = 'true';
+        watch.two = 'true';
+        login();
+    }
+}
+
+function passwordValidate() {
+    if (password.value.trim().length < 8) {
+        errorFxn(password, 'Password should be at least 8 characters long.');
+        watch.one = 'false';
+    } else if (password.value.trim().length >= 8 && !email.value.match(mailformat)) {
+        successFxn(password);
+        watch.two = 'true'
+        watch.one = 'true'
+    } else if (password.value.trim().length >= 8 && email.value.match(mailformat)) {
+        successFxn(password);
+        watch.one = 'true'
+        watch.two = 'true'
+        login();
+    }
+}
+
+function login() {
+    btn.disabled = false;
+}
+
 function validate() {
-    password.addEventListener('keyup', function() {
-        if (password.value.trim().length < 8) {
-            errorFxn(password, 'Password should be at least 8 characters long.')
-        } else if (password.value.trim().length >= 8)
-        {
-            successFxn(password);
-        }
-    });
+    email.addEventListener('keyup', emailValidate);
 
-    email.addEventListener('keyup', function() {
-        if (!email.value.match(mailformat)) {
-            errorFxn(email, 'Please enter a valid email address.')
-        } else {
-            successFxn(email);
-        }
-    });
-
-    login();
+    password.addEventListener('keyup', passwordValidate);
 }
 
 validate();
-
-console.log(password.value === '');
-
-function login() {
-    if (email.value !== '' && password.value !== '') {
-        btn.removeAttribute('disabled');
-    }
-}
